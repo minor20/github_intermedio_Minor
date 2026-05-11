@@ -42,7 +42,7 @@ public static class Formatter
             throw new ArgumentException("Los decimales no pueden ser negativos.", nameof(decimalPlaces));
         }
 
-        return $"{(value * 100).ToString($"F{decimalPlaces}")}%";
+        return $"{(value * 100).ToString($"F{decimalPlaces}", CultureInfo.InvariantCulture)}%";
     }
 
     /// <summary>
